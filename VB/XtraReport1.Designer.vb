@@ -1,5 +1,7 @@
-﻿Namespace WindowsFormsApplication1
-    Partial Public Class XtraReport1
+Namespace WindowsFormsApplication1
+
+    Partial Class XtraReport1
+
         ''' <summary>
         ''' Required designer variable.
         ''' </summary>
@@ -10,32 +12,32 @@
         ''' </summary>
         ''' <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         Protected Overrides Sub Dispose(ByVal disposing As Boolean)
-            If disposing AndAlso (components IsNot Nothing) Then
-                components.Dispose()
+            If disposing AndAlso (Me.components IsNot Nothing) Then
+                Me.components.Dispose()
             End If
+
             MyBase.Dispose(disposing)
         End Sub
 
-        #Region "Designer generated code"
-
+'#Region "Designer generated code"
         ''' <summary>
         ''' Required method for Designer support - do not modify
         ''' the contents of this method with the code editor.
         ''' </summary>
         Private Sub InitializeComponent()
-            Dim msSqlConnectionParameters1 As New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
-            Dim tableQuery1 As New DevExpress.DataAccess.Sql.TableQuery()
-            Dim relationInfo1 As New DevExpress.DataAccess.Sql.RelationInfo()
-            Dim relationColumnInfo1 As New DevExpress.DataAccess.Sql.RelationColumnInfo()
-            Dim tableInfo1 As New DevExpress.DataAccess.Sql.TableInfo()
-            Dim columnInfo1 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim columnInfo2 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim columnInfo3 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim columnInfo4 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim tableInfo2 As New DevExpress.DataAccess.Sql.TableInfo()
-            Dim columnInfo5 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim columnInfo6 As New DevExpress.DataAccess.Sql.ColumnInfo()
-            Dim resources As New System.ComponentModel.ComponentResourceManager(GetType(XtraReport1))
+            Dim msSqlConnectionParameters1 As DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters = New DevExpress.DataAccess.ConnectionParameters.MsSqlConnectionParameters()
+            Dim tableQuery1 As DevExpress.DataAccess.Sql.TableQuery = New DevExpress.DataAccess.Sql.TableQuery()
+            Dim relationInfo1 As DevExpress.DataAccess.Sql.RelationInfo = New DevExpress.DataAccess.Sql.RelationInfo()
+            Dim relationColumnInfo1 As DevExpress.DataAccess.Sql.RelationColumnInfo = New DevExpress.DataAccess.Sql.RelationColumnInfo()
+            Dim tableInfo1 As DevExpress.DataAccess.Sql.TableInfo = New DevExpress.DataAccess.Sql.TableInfo()
+            Dim columnInfo1 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim columnInfo2 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim columnInfo3 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim columnInfo4 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim tableInfo2 As DevExpress.DataAccess.Sql.TableInfo = New DevExpress.DataAccess.Sql.TableInfo()
+            Dim columnInfo5 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim columnInfo6 As DevExpress.DataAccess.Sql.ColumnInfo = New DevExpress.DataAccess.Sql.ColumnInfo()
+            Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(WindowsFormsApplication1.XtraReport1))
             Me.Detail = New DevExpress.XtraReports.UI.DetailBand()
             Me.TopMargin = New DevExpress.XtraReports.UI.TopMarginBand()
             Me.BottomMargin = New DevExpress.XtraReports.UI.BottomMarginBand()
@@ -52,7 +54,7 @@
             Me.FieldCaption = New DevExpress.XtraReports.UI.XRControlStyle()
             Me.PageInfo = New DevExpress.XtraReports.UI.XRControlStyle()
             Me.DataField = New DevExpress.XtraReports.UI.XRControlStyle()
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).BeginInit()
+            CType((Me), System.ComponentModel.ISupportInitialize).BeginInit()
             ' 
             ' Detail
             ' 
@@ -87,27 +89,27 @@
             tableQuery1.Name = "Products"
             relationColumnInfo1.NestedKeyColumn = "CategoryID"
             relationColumnInfo1.ParentKeyColumn = "CategoryID"
-            relationInfo1.KeyColumns.AddRange(New DevExpress.DataAccess.Sql.RelationColumnInfo() { relationColumnInfo1})
+            relationInfo1.KeyColumns.AddRange(New DevExpress.DataAccess.Sql.RelationColumnInfo() {relationColumnInfo1})
             relationInfo1.NestedTable = "Categories"
             relationInfo1.ParentTable = "Products"
-            tableQuery1.Relations.AddRange(New DevExpress.DataAccess.Sql.RelationInfo() { relationInfo1})
+            tableQuery1.Relations.AddRange(New DevExpress.DataAccess.Sql.RelationInfo() {relationInfo1})
             tableInfo1.Name = "Products"
             columnInfo1.Name = "ProductName"
             columnInfo2.Name = "UnitPrice"
             columnInfo3.Name = "UnitsInStock"
             columnInfo4.Name = "UnitsOnOrder"
-            tableInfo1.SelectedColumns.AddRange(New DevExpress.DataAccess.Sql.ColumnInfo() { columnInfo1, columnInfo2, columnInfo3, columnInfo4})
+            tableInfo1.SelectedColumns.AddRange(New DevExpress.DataAccess.Sql.ColumnInfo() {columnInfo1, columnInfo2, columnInfo3, columnInfo4})
             tableInfo2.Name = "Categories"
             columnInfo5.Name = "CategoryName"
             columnInfo6.Name = "Description"
-            tableInfo2.SelectedColumns.AddRange(New DevExpress.DataAccess.Sql.ColumnInfo() { columnInfo5, columnInfo6})
-            tableQuery1.Tables.AddRange(New DevExpress.DataAccess.Sql.TableInfo() { tableInfo1, tableInfo2})
-            Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() { tableQuery1})
+            tableInfo2.SelectedColumns.AddRange(New DevExpress.DataAccess.Sql.ColumnInfo() {columnInfo5, columnInfo6})
+            tableQuery1.Tables.AddRange(New DevExpress.DataAccess.Sql.TableInfo() {tableInfo1, tableInfo2})
+            Me.sqlDataSource1.Queries.AddRange(New DevExpress.DataAccess.Sql.SqlQuery() {tableQuery1})
             Me.sqlDataSource1.ResultSchemaSerializable = resources.GetString("sqlDataSource1.ResultSchemaSerializable")
             ' 
             ' reportHeaderBand1
             ' 
-            Me.reportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() { Me.xrPivotGrid1})
+            Me.reportHeaderBand1.Controls.AddRange(New DevExpress.XtraReports.UI.XRControl() {Me.xrPivotGrid1})
             Me.reportHeaderBand1.HeightF = 125F
             Me.reportHeaderBand1.Name = "reportHeaderBand1"
             ' 
@@ -115,11 +117,12 @@
             ' 
             Me.xrPivotGrid1.DataMember = "Products"
             Me.xrPivotGrid1.DataSource = Me.sqlDataSource1
-            Me.xrPivotGrid1.Fields.AddRange(New DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField() { Me.fieldProductName1, Me.fieldUnitPrice1, Me.fieldUnitsInStock1, Me.fieldUnitsOnOrder1, Me.fieldCategoryName1, Me.fieldDescription1})
+            Me.xrPivotGrid1.Fields.AddRange(New DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField() {Me.fieldProductName1, Me.fieldUnitPrice1, Me.fieldUnitsInStock1, Me.fieldUnitsOnOrder1, Me.fieldCategoryName1, Me.fieldDescription1})
             Me.xrPivotGrid1.LocationFloat = New DevExpress.Utils.PointFloat(0F, 0F)
             Me.xrPivotGrid1.Name = "xrPivotGrid1"
             Me.xrPivotGrid1.OptionsPrint.FilterSeparatorBarPadding = 3
             Me.xrPivotGrid1.SizeF = New System.Drawing.SizeF(649.9999F, 125F)
+            AddHandler Me.xrPivotGrid1.CustomRowHeight, New System.EventHandler(Of DevExpress.XtraReports.UI.PivotGrid.PivotCustomRowHeightEventArgs)(AddressOf Me.xrPivotGrid1_CustomRowHeight)
             ' 
             ' fieldProductName1
             ' 
@@ -214,33 +217,46 @@
             ' 
             ' XtraReport1
             ' 
-            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() { Me.Detail, Me.TopMargin, Me.BottomMargin, Me.reportHeaderBand1})
+            Me.Bands.AddRange(New DevExpress.XtraReports.UI.Band() {Me.Detail, Me.TopMargin, Me.BottomMargin, Me.reportHeaderBand1})
             Me.DataMember = "Products"
             Me.DataSource = Me.sqlDataSource1
             Me.Margins = New System.Drawing.Printing.Margins(100, 100, 48, 50)
-            Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() { Me.Title, Me.FieldCaption, Me.PageInfo, Me.DataField})
+            Me.StyleSheet.AddRange(New DevExpress.XtraReports.UI.XRControlStyle() {Me.Title, Me.FieldCaption, Me.PageInfo, Me.DataField})
             Me.Version = "14.1"
-            DirectCast(Me, System.ComponentModel.ISupportInitialize).EndInit()
-
+            CType((Me), System.ComponentModel.ISupportInitialize).EndInit()
         End Sub
 
-        #End Region
-
+'#End Region
         Private Detail As DevExpress.XtraReports.UI.DetailBand
+
         Private TopMargin As DevExpress.XtraReports.UI.TopMarginBand
+
         Private BottomMargin As DevExpress.XtraReports.UI.BottomMarginBand
+
         Private sqlDataSource1 As DevExpress.DataAccess.Sql.SqlDataSource
+
         Private reportHeaderBand1 As DevExpress.XtraReports.UI.ReportHeaderBand
+
         Private Title As DevExpress.XtraReports.UI.XRControlStyle
+
         Private FieldCaption As DevExpress.XtraReports.UI.XRControlStyle
+
         Private PageInfo As DevExpress.XtraReports.UI.XRControlStyle
+
         Private DataField As DevExpress.XtraReports.UI.XRControlStyle
-        Private WithEvents xrPivotGrid1 As DevExpress.XtraReports.UI.XRPivotGrid
+
+        Private xrPivotGrid1 As DevExpress.XtraReports.UI.XRPivotGrid
+
         Private fieldProductName1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
+
         Private fieldUnitPrice1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
+
         Private fieldUnitsInStock1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
+
         Private fieldUnitsOnOrder1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
+
         Private fieldCategoryName1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
+
         Private fieldDescription1 As DevExpress.XtraReports.UI.PivotGrid.XRPivotGridField
     End Class
 End Namespace
