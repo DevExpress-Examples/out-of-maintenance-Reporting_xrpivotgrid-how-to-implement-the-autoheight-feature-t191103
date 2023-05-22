@@ -3,6 +3,7 @@ using System.Drawing;
 using System.Collections;
 using System.ComponentModel;
 using DevExpress.XtraReports.UI;
+using DevExpress.XtraReports.UI.PivotGrid;
 
 namespace WindowsFormsApplication1
 {
@@ -19,7 +20,7 @@ namespace WindowsFormsApplication1
             for (int i = 0; i < e.ColumnCount; i++)
             {
                 string value = e.GetRowCellValue(i).ToString();
-                SizeF size = gr.MeasureString(value, e.DataField.Appearance.Cell.Font, e.DataField.Width);
+                SizeF size = gr.MeasureString(value, (e.DataField as XRPivotGridField).Appearance.Cell.Font, e.DataField.Width);
                 int height = Convert.ToInt32(size.Height + 0.5);
                 e.RowHeight = e.RowHeight > height?e.RowHeight : height;
             }
